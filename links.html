@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <nav>
+                <img src="bracu.jpg" class="logo">
+                <ul>
+                    <li><a href="index.html3">Home</a></li>
+                    <li><a href="about.html">Info</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="links.html">Links</a></li>
+                </ul>
+            </nav>
+            <table class="table">
+                    <tr>
+                        <th>University</th>
+                        <td><a href="https://www.bracu.ac.bd/">https://www.bracu.ac.bd/</a></td>
+                    </tr>
+                    <tr>
+                        <th>Piazza Class Link</th>
+                        <td>https://piazza.com/class/l3q59z417auaz</td>
+                    </tr>
+                    <tr>
+                        <th>Favorite Netflix Show</th>
+                        <td>https://www.netflix.com/bd/title/80025172</td>
+                    </tr>
+                    <tr>
+                        <th>Favorite Book</th>
+                        <td>https://www.amazon.com/Great-Gatsby-F-Scott-Fitzgerald/dp/0743273567</td>
+                    </tr>
+                    <tr>
+                        <th>Contact</th>
+                        <td><a href="contact.html">click here for contact</a></td>
+                    </tr>
+                </table>
+                <div>
+                    <h3>Hero Convertor</h3>
+                    <script>
+                        function convert() {
+                            var input = document.getElementById("input");
+                            value = parseInt(input.value);
+            
+                            var conversion = document.getElementById("convert");
+                            if (conversion.value == "kgtopounds") {
+                                value *= 2.20462262;
+                            } else {
+                                value *= 0.45359237;
+                            }
+            
+                            var answer = document.getElementById("answer");
+                            answer.innerHTML = value;
+                        }
+                    </script>
+                    <fieldset>
+                        Convert <input id="input" type="text" />
+                        <select id="convert">
+                            <option value="kgtopounds">kg to lb</option>
+                            <option value="poundstokg">lb to kg</option>
+                        </select>
+                        <button onclick="convert();">Calculate</button>
+                        <span id="answer"></span>
+                    </fieldset>
+                </div>
+                <h3>Series</h3>
+                <script>
+                    function calculate() {
+                        var values = document.getElementById('series').value.split(/,/g);
+                        var sum = values.reduce(function(a, b) {
+                            return parseInt(a) + parseInt(b);
+                        });
+                        document.querySelector('#max').innerHTML = values.max();
+                        document.querySelector('#min').innerHTML = values.min();
+                        document.querySelector('#sum').innerHTML = sum;
+                        document.querySelector('#avg').innerHTML = sum / values.length;
+                        document.querySelector('#reverse').innerHTML = values.reverse().join(',');
+                    }
+        
+                    Array.prototype.max = function() {
+                        return Math.max.apply(null, this);
+                    };
+        
+                    Array.prototype.min = function() {
+                        return Math.min.apply(null, this);
+                    };
+                </script>
+                <table width="50%" border="0">
+                    <tr>
+                        <td width="13%">Input Series of Number(seperated by Comma):</td>
+                        <td width="29%"><input name="series" type="text" id="series" /></td>
+                    </tr>
+                    <tr>
+                        <td>Max :</td>
+                        <td>
+                            <div id="max"> </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Min :</td>
+                        <td>
+                            <div id="min"> </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sum :</td>
+                        <td>
+                            <div id="sum"> </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Average :</td>
+                        <td>
+                            <div id="avg"> </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Reverse Order :</td>
+                        <td>
+                            <div id="reverse"> </div>
+                        </td>
+                    </tr>
+                </table>
+                <button onclick="calculate();">calculate</button>
+            </div>
+            <div>
+                <script>
+                    function erase() {
+                        document.getElementById("in").value = "";
+                    }
+        
+                    function cap() {
+                        var id = document.getElementById("in");
+                        var a = id.value;
+                        erase();
+                        var len = a.length;
+                        for (i = 0; i < len; i++) {
+                            var temp = a[i].toUpperCase();
+                            id.value += temp;
+                        }
+                    }
+        
+                    function srt() {
+                        var id = document.getElementById("in");
+                        var temp = id.value;
+                        var a = temp.split("\n");
+                        a.sort();
+                        erase();
+                        for (i = 0; i < a.length; i++) {
+                            id.value += a[i] + '\n';
+                        }
+                    }
+        
+                    function stripBlank() {
+                        var id = document.getElementById("in");
+                        var temp = id.value;
+                        var a = temp.split("\n");
+                        erase();
+                        for (i = 0; i < a.length; i++) {
+                            if (a[i] !== '') id.value += a[i].trim() + '\n';
+                        }
+                    }
+                </script>
+                <h3>Magic!</h3>
+                <textarea type="text" id="in" rows="10" cols="40"></textarea>
+                <br/>
+                <button onClick="erase()">Clear</button>
+                <button onClick="cap()">Capitalize</button>
+                <button onClick="srt()">Sort</button>
+                <button onClick="stripBlank()">Strip Blank</button>
+            </div>
+            <br/>
+            <br/>
+    
+</body>
+</html>

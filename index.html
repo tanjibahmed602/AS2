@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="bracu.jpg" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Info</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <span class="title">Brac University Student</span>
+            <h1>Hello, I’m <span>Tanjib</span></h1>
+            <p>I am currently at 8th Semester of my Bachelor of Science(CS).</p>
+        </div>
+    </div>
+    <section id="hero">
+        <div class="section-inner">
+            <img src="me.jpg" class="profile-img">
+            <div class="section-inner">
+                <h2>About me</h2>
+                <p>I am Tanjib Ahmed. I am from Dhaka which is the beautiful crowdy capital of Bangladesh. As a 18 year old, I am adventurous and always looking for interesting things to learn that helps in getting exposed to new culture and norms. Learning new programming language is something I always enjoy and love to do. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolore molestiae nostrum itaque accusamus nam a dolor sint nobis alias quis obcaecati debitis, nihil repudiandae nemo maxime iusto ipsum delectus amet ullam! Reiciendis voluptates, beatae harum sint itaque inventore sit ducimus! Quae, velit cumque. Quam quae a voluptates, minima dolorum recusandae porro magnam? Ex est eos quos maiores necessitatibus delectus velit commodi vitae? Nesciunt minima laudantium quaerat optio, eius laborum ad quas suscipit neque nostrum facilis alias, error cum aut fugit ex mollitia. Magnam atque quasi reiciendis quam non deserunt placeat debitis quas inventore eius, suscipit numquam quibusdam tempora harum?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, nulla reiciendis, incidunt eos, voluptatibus et iste vitae sequi molestiae officia voluptate dignissimos maxime ipsam cum necessitatibus. Odit, quo. Incidunt, facilis! Perferendis soluta similique consequuntur qui! Labore soluta accusamus alias iste, expedita quidem ab dignissimos illo dolorum, possimus corrupti, earum voluptatem molestiae recusandae magnam consequuntur laboriosam hic fugit eveniet ex perferendis?</p>
+            </div>
+            <h3>Quote Box</h3>
+    <div class="center1" id="demo">
+        <script>
+            var quotes = [
+                'The purpose of our lives is to be happy.',
+                'Get busy living or get busy dying.',
+                'Many of life’s failures are people who did not realize how close they were to success when they gave up.',
+                'Money and success don’t change people; they merely amplify what is already there.',
+                'You only live once, but if you do it right, once is enough',
+                'Do not mind anything that anyone tells you about anyone else. Judge everyone and everything for yourself.'
+            ]
+            var rand = Math.floor(Math.random() * (quotes.length));
+            document.write(quotes[rand]);
+        </script>
+        <br/>
+    </div>
+    <div class="center2" id="demo2">
+        <script>
+            function my(c) {
+                document.getElementById("demo").style.backgroundColor = c;
+                document.getElementById("demo").style.border = c;
+                document.getElementById("demo2").style.border = c;
+            }
+        </script>
+        <button class="button" onclick= "my('rgb(177, 22, 22)')"></button>
+        <button class="button button2" onclick= "my('#008CBA')"></button>
+        <button class="button button3" onclick= "my('purple')"></button>
+        <button class="button button4" onclick= "my('#9e04e6')"></button>
+    </div>
+            <footer class="footer">
+                       <div class="footer_nav">
+                          <script>
+                             var date = document.lastModified;
+                             document.getElementById("footerinfo").innerHTML = document.write("Last Modified: " + date +". " + "Page path is: " + window.location.pathname);
+                          </script>
+                       </div>
+                    </div>
+                 </footer>
+
+
+    
+    
+</body>
+</html>
