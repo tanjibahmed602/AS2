@@ -127,52 +127,19 @@
                 </table>
                 <button onclick="calculate();">calculate</button>
             </div>
-            <div>
-                <script>
-                    function erase() {
-                        document.getElementById("in").value = "";
-                    }
-        
-                    function cap() {
-                        var id = document.getElementById("in");
-                        var a = id.value;
-                        erase();
-                        var len = a.length;
-                        for (i = 0; i < len; i++) {
-                            var temp = a[i].toUpperCase();
-                            id.value += temp;
-                        }
-                    }
-        
-                    function srt() {
-                        var id = document.getElementById("in");
-                        var temp = id.value;
-                        var a = temp.split("\n");
-                        a.sort();
-                        erase();
-                        for (i = 0; i < a.length; i++) {
-                            id.value += a[i] + '\n';
-                        }
-                    }
-        
-                    function stripBlank() {
-                        var id = document.getElementById("in");
-                        var temp = id.value;
-                        var a = temp.split("\n");
-                        erase();
-                        for (i = 0; i < a.length; i++) {
-                            if (a[i] !== '') id.value += a[i].trim() + '\n';
-                        }
-                    }
-                </script>
-                <h3>Magic!</h3>
-                <textarea type="text" id="in" rows="10" cols="40"></textarea>
-                <br/>
-                <button onClick="erase()">Clear</button>
-                <button onClick="cap()">Capitalize</button>
-                <button onClick="srt()">Sort</button>
-                <button onClick="stripBlank()">Strip Blank</button>
             </div>
+      <div class="magicbox">
+        <textarea cols="30" rows="10"></textarea>
+        <div class="buttons">
+          <button class="clear">Clear It</button>
+          <button class="cap">Capitalize</button>
+          <button class="sort">Sort</button>
+          <button class="reverse">Reverse</button>
+          <button class="strip">Strip Blank</button>
+          <button class="num">Add Numbers</button>
+          <button class="shuffle">Shuffle</button>
+        </div>
+      </div>
             <br/>
             <br/>
     
